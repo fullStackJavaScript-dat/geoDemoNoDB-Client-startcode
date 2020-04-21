@@ -9,8 +9,8 @@ const SERVER_URL = "https://1bf1238a.ngrok.io";
 
 const MyButton = ({ txt, onPressButton }) => {
   return (
-    <TouchableHighlight style={{ backgroundColor: "#4682B4", margin: 3 }} onPress={onPressButton}>
-      <Text style={{ fontSize: 22, textAlign: "center", padding: 5 }}>{txt}</Text>
+    <TouchableHighlight style={styles.touchable} onPress={onPressButton}>
+      <Text style={styles.touchableTxt}>{txt}</Text>
     </TouchableHighlight>
   );
 }
@@ -88,6 +88,9 @@ const styles = StyleSheet.create({
     paddingTop: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
   },
+  touchable: { backgroundColor: "#4682B4", margin: 3 },
+  touchableTxt : { fontSize: 22, textAlign: "center", padding: 5 },
+  
   fetching: {
     fontSize: 35, flex: 14,
     flexDirection: "row",

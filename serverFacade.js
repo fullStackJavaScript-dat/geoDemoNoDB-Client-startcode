@@ -9,7 +9,8 @@ ServerFacade = () => {
   }
 
   async function isUserInArea(lon, lat) {
-    const status = await fetch(`${SERVER_URL}/geoapi/isuserinarea/${lon}/${lat}`).then(res => res.json())
+    const status = await fetch(`${SERVER_URL}/geoapi/isuserinarea/${lon}/${lat}`).
+                    then(res => res.json())
     return status;
   }
 
